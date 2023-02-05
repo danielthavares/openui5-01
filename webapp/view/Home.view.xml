@@ -1,0 +1,31 @@
+<mvc:View
+	controllerName="sap.ui.app.exemplo01.controller.Home"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout">
+	<Page
+		id="page"
+		title="{i18n>title}">
+		<content>
+
+				<TileContent footer="August 21, 2021" class="sapUiSmallMargin">
+					<NewsContent contentText="SAP Unveils Powerful New Player Comparison Tool Exclusively on NFL.com"
+						subheader="SAP News" />
+				</TileContent>
+				<Input value="{hello>/recipient/name}" description= "Hello {hello>/recipient/name}" valueLiveUpdate="true" class="sapUiSmallMargin" width="50%"/>
+				<Button
+					id="helloDialogButton"
+					text="{i18n>openDialogButtonText}"
+					press=".onOpenDialog"
+					class="sapUiSmallMargin"/>
+				<Button
+					text="Confirm"
+					class="sapUiSmallMargin"
+					press=".onConfirmationMessageBoxPress"
+					width="280px" />
+				<Button id="displayNotFoundBtn" text="{i18n>DisplayNotFound}" press=".onDisplayNotFound" class="sapUiSmallMargin"/>	
+				<Button id="employeeListBtn" text="{i18n>ShowEmployeeList}" press=".onNavToEmployees" class="sapUiSmallMargin"/>
+		</content>
+	</Page>
+</mvc:View>
